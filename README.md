@@ -1,36 +1,175 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Frame Generator
 
-## Getting Started
+**Free, open-source tool to create professional product images with custom frames, badges, and marketplace-compliant sizing.**
 
-First, run the development server:
+No signup required. No database. All data stored locally in your browser.
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+
+## ✨ Features
+
+- 🎨 **Custom Frames & Borders** - Add colored borders with adjustable thickness
+- 🏷️ **Badge Overlays** - Multiple pre-designed badges with customizable positioning
+- 📐 **Marketplace Presets** - Auto-resize for Amazon (1000x1000, 2000x2000) and eBay (1600x1600, 1000x1000)
+- 📦 **Bulk Export** - Export multiple images at once as ZIP files
+- 🎯 **Live Preview** - Real-time canvas preview with all customizations
+- 💾 **Local Storage** - All projects saved in browser localStorage
+- 🚀 **No Backend Required** - Runs entirely in your browser
+- 🔓 **100% Free** - No limits, no signup, no tracking
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ installed
+- (Optional) [Remove.bg API key](https://www.remove.bg/api) for background removal feature
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/product-frame-generator.git
+cd product-frame-generator
+
+# Install dependencies
+npm install
+
+# Copy environment file
+cp .env.example .env.local
+
+# (Optional) Add your Remove.bg API key to .env.local
+# REMOVE_BG_API_KEY=your_api_key_here
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Create a Template** - Click "New Frame Template" and choose your marketplace
+2. **Upload Images** - Drag and drop or click to upload product images
+3. **Customize** - Adjust borders, colors, backgrounds, and add badges
+4. **Export** - Download individual images or bulk export as ZIP
 
-## Learn More
+All your templates are automatically saved in your browser's localStorage.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** TailwindCSS
+- **Image Processing:** HTML5 Canvas API
+- **Storage:** Browser localStorage
+- **Icons:** Lucide React
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+├── app/
+│   ├── dashboard/          # Template management
+│   ├── editor/[projectId]/ # Image editor
+│   ├── layout.tsx          # Root layout
+│   └── page.tsx            # Landing page
+├── components/
+│   ├── dashboard/          # Dashboard components
+│   └── editor/             # Editor components
+├── lib/
+│   ├── local-storage.ts    # localStorage utilities
+│   └── image-processing.ts # Canvas processing
+├── types/
+│   └── index.ts            # TypeScript definitions
+└── public/
+    ├── badges/             # SVG badge files
+    └── placeholder.svg     # Default placeholder image
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Marketplace Presets
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Amazon
+- **Standard:** 1000×1000 (minimum zoom requirement)
+- **HD:** 2000×2000 (recommended high quality)
+
+### eBay
+- **Standard:** 1600×1600 (recommended)
+- **Lightweight:** 1000×1000
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Only one optional environment variable:
+
+```env
+# Optional: Remove.bg API for background removal
+REMOVE_BG_API_KEY=your_api_key_here
+```
+
+If not set, the background removal feature will be disabled.
+
+## 🚢 Deployment
+
+### Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/product-frame-generator)
+
+1. Click the button above or push to GitHub
+2. Import project in Vercel
+3. (Optional) Add `REMOVE_BG_API_KEY` environment variable
+4. Deploy
+
+### Deploy to Netlify
+
+```bash
+npm run build
+```
+
+Upload the `.next` folder to Netlify or connect your GitHub repository.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Badge icons from various open-source icon sets
+- Placeholder image pattern inspired by standard image placeholders
+- Built with [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), and [Lucide Icons](https://lucide.dev/)
+
+## 💡 Future Ideas
+
+- [ ] Custom badge upload
+- [ ] More marketplace presets (Etsy, Shopify)
+- [ ] Image filters and effects
+- [ ] Template sharing via URL
+- [ ] Batch processing improvements
+- [ ] PWA support for offline use
+
+## 🐛 Issues
+
+Found a bug? Please [open an issue](https://github.com/yourusername/product-frame-generator/issues) with:
+- Description of the bug
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots if applicable
+
+## ⭐ Show Your Support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+Made with ❤️ for marketplace sellers everywhere
