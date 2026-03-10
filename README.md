@@ -4,9 +4,11 @@
 
 No signup required. No database. All data stored locally in your browser.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Next.js](https://img.shields.io/badge/Next.js-16-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Next.js](https://img.shields.io/badge/Next.js-16-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+
+## 📸 Preview
+
+![Product Frame Generator Screenshot](https://raw.githubusercontent.com/Lucenta16/product-frame-generator/main/public/screenshot.png)
 
 ## ✨ Features
 
@@ -90,10 +92,12 @@ All your templates are automatically saved in your browser's localStorage.
 ## 🎨 Marketplace Presets
 
 ### Amazon
+
 - **Standard:** 1000×1000 (minimum zoom requirement)
 - **HD:** 2000×2000 (recommended high quality)
 
 ### eBay
+
 - **Standard:** 1600×1600 (recommended)
 - **Lightweight:** 1000×1000
 
@@ -161,6 +165,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🐛 Issues
 
 Found a bug? Please [open an issue](https://github.com/yourusername/product-frame-generator/issues) with:
+
 - Description of the bug
 - Steps to reproduce
 - Expected vs actual behavior
