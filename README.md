@@ -149,18 +149,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Badge icons from various open-source icon sets
 - Placeholder image pattern inspired by standard image placeholders
 - Built with [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), and [Lucide Icons](https://lucide.dev/)
-
-## 💡 Future Ideas
-
-- [ ] Custom badge upload
-- [ ] More marketplace presets (Etsy, Shopify)
-- [ ] Image filters and effects
-- [ ] Template sharing via URL
-- [ ] Batch processing improvements
-- [ ] PWA support for offline use
 
 ## 🐛 Issues
 
